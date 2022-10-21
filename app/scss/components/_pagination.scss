@@ -1,10 +1,12 @@
 .pagination {
     @include vendor('display', 'flex');
+    flex-wrap: wrap;
     list-style: none;
     margin-left: (_size(element-margin) * -0.5);
     padding-left: 0;
     li {
         padding: 0 0 0 (_size(element-margin) * 0.5);
+        margin-bottom: (_size(element-margin) * 0.5);
         vertical-align: middle;
         &.is-active {
             @extend .button;
@@ -14,6 +16,42 @@
             cursor: default;
             &:active {
                 background-color: transparentize(_palette(accent), 0.95);
+            }
+        }
+    }
+    @include breakpoint('<=xsmall') {
+        &:not(.fixed) {
+            @include vendor('flex-direction', 'column');
+            margin-left: 0;
+            width: 100% !important;
+            li {
+                @include vendor('flex-grow', '1');
+                @include vendor('flex-shrink', '1');
+                padding: (_size(element-margin) * 0.5) 0 0 0;
+                text-align: center;
+                width: 100%;
+                >* {
+                    width: 100%;
+                }
+                &:first-child {
+                    padding-top: 0;
+                }
+                &.is-active {
+                    @include vendor('flex-grow', '1');
+                    @include vendor('flex-shrink', '1');
+                    margin-left: 0;
+                    margin-top: (_size(element-margin) * 0.5);
+                    padding: 0 0 0 0;
+                }
+                button,
+                .button {
+                    width: 100%;
+                    &.icon {
+                        &:before {
+                            margin-left: -0.5em;
+                        }
+                    }
+                }
             }
         }
     }
