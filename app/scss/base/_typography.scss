@@ -73,7 +73,6 @@ h6 {
     color: _palette(fg-bold);
     font-family: _font(family-heading);
     font-weight: _font(weight-heading-bold);
-    letter-spacing: _font(kerning-heading);
     line-height: 1.65;
     margin: 0 0 (_size(element-margin) * 0.5) 0;
     text-transform: uppercase;
@@ -83,11 +82,17 @@ h6 {
     }
 }
 
+h1 {
+    letter-spacing: _font(kerning-heading);
+}
+
 h2 {
+    letter-spacing: _font(kerning-heading) * 0.75;
     font-size: 1.1em;
 }
 
 h3 {
+    letter-spacing: _font(kerning-heading) * 0.5;
     font-size: 0.9em;
 }
 

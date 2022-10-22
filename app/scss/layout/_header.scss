@@ -41,8 +41,9 @@ body {
         padding: 0 0 0 1.5em;
         white-space: nowrap;
         a {
+            font-family: _font(family-heading);
+            letter-spacing: _font(kerning-heading);
             font-size: 0.7em;
-            letter-spacing: .25em;
             line-height: 1.65;
             margin: 0 0 1em;
             text-transform: uppercase;

@@ -39,8 +39,8 @@
             text-transform: uppercase;
             font-family: _font(family-heading);
             font-weight: _font(weight-heading-bold);
-            letter-spacing: _font(kerning-heading);
-            font-weight: _font(weight-heading-extrabold);
+            letter-spacing: _font(kerning-heading) * 0.5;
+            font-weight: _font(weight-heading-bold);
             color: _palette(fg-bold);
         }
         p {
