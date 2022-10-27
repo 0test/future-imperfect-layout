@@ -19,6 +19,22 @@
             }
         }
     }
+    &.special {
+        @include vendor('justify-content', 'center');
+        width: 100%;
+        margin-left: 0;
+
+        li {
+            &:first-child {
+                padding-left: 0;
+            }
+        }
+        li.is-active {
+            &:first-child {
+                padding: 0 2.5em;
+            }
+        }        
+    }    
     @include breakpoint('<=xsmall') {
         &:not(.fixed) {
             @include vendor('flex-direction', 'column');
